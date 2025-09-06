@@ -1,4 +1,4 @@
-# IEEE NeoPixel Workshop (Penn State)
+# Penn State Harrisburg IEEE NeoPixel Workshop
 
 Build a 7‑LED NeoPixel project driven by an Arduino Nano and powered from a USB charger. This repo includes starter code, wiring/power notes, a step‑by‑step process, and troubleshooting.
 
@@ -15,7 +15,7 @@ Build a 7‑LED NeoPixel project driven by an Arduino Nano and powered from a US
 - USB charger GND -> LED strip GND  
 - MCU GND -> LED strip GND (common ground)  
 - MCU D7 -> 330–470 Ω -> LED DIN  
-- 1000 µF electrolytic across LED 5V/GND near the first LED
+- 1000 µF electrolytic across LED 5V/GND near the first LED (Still need to fix the schematic to electrolytic)
 
 Notes:
 - Do not power the strip from the Nano’s 5V pin.
