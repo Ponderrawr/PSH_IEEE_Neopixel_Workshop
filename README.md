@@ -9,7 +9,7 @@ Build a 7‑LED NeoPixel project driven by an Arduino Nano and powered from a US
 - Power the LED strip from a USB wall charger; power the microcontroller from your laptop.
 
 ## Wiring (summary)
-![Wiring diagram](assets/wiring-diagram.png)
+![Wiring diagram](Neopixel_Wiring_Diagram.png)
 
 - USB charger 5V -> LED strip 5V  
 - USB charger GND -> LED strip GND  
