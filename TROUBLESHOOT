@@ -1,0 +1,20 @@
+# Troubleshooting
+
+- No lights:
+  - Verify ~5 V on the strip (red-to-black).
+  - Confirm common ground between MCU and strip.
+  - Check data pin number and library installed.
+
+- Flicker/garbage colors:
+  - Ensure 330–470 Ω series resistor on data.
+  - Shorten the data wire; twist with ground.
+  - For 3.3 V MCUs, add a 74AHCT125/74HCT14 level shifter or lower LED V+.
+
+- Brownout or white looks yellow/pink:
+  - Reduce brightness or use thicker/shorter power leads.
+  - Check USB cable gauge (prefer 22–24 AWG for power).
+
+- Upload failures (Nano clones):
+  - Install CH340 driver.
+  - Try “ATmega328P (Old Bootloader)” in Arduino IDE if needed.
+  - Check the correct COM port.
