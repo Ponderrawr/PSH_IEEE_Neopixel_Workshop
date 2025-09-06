@@ -14,7 +14,7 @@ Build a 7‑LED NeoPixel project driven by an Arduino Nano and powered from a US
 - USB charger 5V -> LED strip 5V  
 - USB charger GND -> LED strip GND  
 - MCU GND -> LED strip GND (common ground)  
-- MCU D6 (example) -> 330–470 Ω -> LED DIN  
+- MCU D7 -> 330–470 Ω -> LED DIN  
 - 1000 µF electrolytic across LED 5V/GND near the first LED
 
 Notes:
@@ -23,69 +23,32 @@ Notes:
 
 ## Power Notes
 - One 7‑LED strip worst case ≈ 7 × 60 mA = 0.42 A at 5 V (full white, full brightness).
-- Multi‑port USB‑A chargers are easy and safe for a classroom.
 - Cap brightness in code (e.g., 25–40%) for comfort and headroom.
 
 ## Starter Code (Nano, 5V logic)
 See `code/starter_nano/starter_nano.ino`. Paste into the Arduino IDE.
 
 ```cpp
-#include <Adafruit_NeoPixel.h>
+#include <FastLED.h>
 
-#define PIN 6
+#define DATA_PIN 7
 #define NUM_LEDS 7
-#define BRIGHTNESS 64  // ~25% to keep current modest
-
-Adafruit_NeoPixel strip(NUM_LEDS, PIN, NEO_GRB + NEO_KHZ800);
+#define BRIGHTNESS 50  // ~25% to keep current modest
 
 void setup() {
-  strip.begin();
-  strip.setBrightness(BRIGHTNESS);
-  strip.show(); // Initialize all pixels to 'off'
+  delay(2000);
+  FastLED.addLeds<WS2812, DATA_PIN, GRB>(leds, NUM_LEDS);
 }
 
 void loop() {
-  colorWipe(strip.Color(255, 0, 0), 30);
-  colorWipe(strip.Color(0, 255, 0), 30);
-  colorWipe(strip.Color(0, 0, 255), 30);
-  rainbow(10);
-}
-
-void colorWipe(uint32_t color, uint8_t waitMs) {
-  for (uint16_t i = 0; i < strip.numPixels(); i++) {
-    strip.setPixelColor(i, color);
-    strip.show();
-    delay(waitMs);
+  for(int whiteLed = 0' whiteLed <NUM_LEDS; whiteLed = whiteLed + 1) {
+    leds[whiteLed] = CRGB::White;
+    FastLED.show();
+    delay(100);
+    leds[whiteLed] = CRGB::Black;
   }
 }
 
-void rainbow(uint8_t waitMs) {
-  for (uint16_t j = 0; j < 256; j++) {
-    for (uint16_t i = 0; i < strip.numPixels(); i++) {
-      strip.setPixelColor(i, wheel((i + j) & 255));
-    }
-    strip.show();
-    delay(waitMs);
-  }
-}
-
-uint32_t wheel(byte pos) {
-  if (pos < 85) {
-    return strip.Color(pos * 3, 255 - pos * 3, 0);
-  } else if (pos < 170) {
-    pos -= 85;
-    return strip.Color(255 - pos * 3, 0, pos * 3);
-  } else {
-    pos -= 170;
-    return strip.Color(0, pos * 3, 255 - pos * 3);
-  }
-}
 ESP32/RP2040 Option
 If you use 3.3 V boards, add a level shifter (SN74AHCT125/74HCT14) or drop LED V+ to ~4.3–4.5 V with a diode. See code/starter_esp32/starter_esp32.ino.
 
-Docs
-Wiring: docs/WIRING.md
-Power: docs/POWER.md
-Step-by-step process: docs/PROCESS.md
-Troubleshooting: docs/TROUBLESHOOT.md
-Bill of Materials: bom/BOM.md
