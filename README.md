@@ -1,30 +1,12 @@
 # IEEE NeoPixel Workshop (Penn State)
 
-Build a 7‑LED NeoPixel project driven by an Arduino Nano (or ESP32) and powered safely from a USB charger. This repo includes starter code, wiring/power notes, a step‑by‑step process, and troubleshooting.
+Build a 7‑LED NeoPixel project driven by an Arduino Nano and powered from a USB charger. This repo includes starter code, wiring/power notes, a step‑by‑step process, and troubleshooting.
 
 ## Quick Start
 - Install the Arduino IDE.
-- Install the “Adafruit NeoPixel” library (Library Manager).
+- Install the “FastLED” library (Library Manager).
 - Open `code/starter_nano/starter_nano.ino`, set `NUM_LEDS` to 7, choose your data pin, and upload.
 - Power the LED strip from a USB wall charger; power the microcontroller from your laptop.
-
-## Repository Structure
-README.md
-LICENSE
-assets/
-wiring-diagram.png
-bom/
-BOM.md
-code/
-starter_nano/
-starter_nano.ino
-starter_esp32/
-starter_esp32.ino
-docs/
-PROCESS.md
-WIRING.md
-POWER.md
-TROUBLESHOOT.md
 
 ## Wiring (summary)
 ![Wiring diagram](assets/wiring-diagram.png)
