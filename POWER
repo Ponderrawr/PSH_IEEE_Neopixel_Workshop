@@ -1,1 +1,13 @@
+# Power Guide
 
+- Current draw:
+  - WS2812B worst case ≈ 60 mA/LED (full white, full brightness).
+  - One 7‑LED strip ≈ 0.42 A worst case.
+- Recommended supplies:
+  - Multi‑port USB‑A chargers (2.4 A per port is ample for one strip).
+  - Keep power cables short (1 ft) to minimize voltage drop.
+- Central PSU option:
+  - A 5V/20 A supply with fused distribution can power many strips; enclose mains and fuse each branch (~1 A).
+- Do not power the LEDs from the Arduino’s 5V pin.
+- Always tie grounds between the strip and MCU.
+- Cap brightness in code (e.g., 25–40%) for comfort and headroom.
