@@ -41,7 +41,7 @@ void setup() {
 }
 
 void loop() {
-  for(int whiteLed = 0' whiteLed <NUM_LEDS; whiteLed = whiteLed + 1) {
+  for(int whiteLed = 0; whiteLed <NUM_LEDS; whiteLed = whiteLed + 1) {
     leds[whiteLed] = CRGB::White;
     FastLED.show();
     delay(100);
