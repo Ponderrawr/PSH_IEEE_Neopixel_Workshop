@@ -15,7 +15,7 @@ Build a 7‑LED NeoPixel project driven by an Arduino Nano and powered from a US
 - USB charger GND -> LED strip GND  
 - MCU GND -> LED strip GND (common ground)  
 - MCU D7 -> 330–470 Ω -> LED DIN  
-- 1000 µF electrolytic across LED 5V/GND near the first LED (Still need to fix the schematic to electrolytic)
+- 1000 µF electrolytic across LED 5V/GND near the first LED
 
 Notes:
 - Do not power the strip from the Nano’s 5V pin.
@@ -50,5 +50,5 @@ void loop() {
 }
 
 ESP32/RP2040 Option
-If you use 3.3 V boards, add a level shifter (SN74AHCT125/74HCT14) or drop LED V+ to ~4.3–4.5 V with a diode. See code/starter_esp32/starter_esp32.ino.
+If you use 3.3 V boards, add a level shifter (SN74AHCT125/74HCT14) or drop LED V+ to ~4.3–4.5 V with a diode. See code/starter_esp32/starter_esp32.ino. (Work in progress, not added yet)
 
