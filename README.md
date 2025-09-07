@@ -26,7 +26,7 @@ Notes:
 - Cap brightness in code (e.g., 25–40%) for comfort and headroom.
 
 ## Starter Code (Nano, 5V logic)
-See `code/starter_nano/starter_nano.ino`. Paste into the Arduino IDE.
+See `starter_nano/starter_nano.ino`. Paste into the Arduino IDE.
 
 ```cpp
 #include <FastLED.h>
