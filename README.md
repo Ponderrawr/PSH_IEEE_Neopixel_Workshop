@@ -5,7 +5,7 @@ Build a 7‑LED NeoPixel project driven by an Arduino Nano and powered from a US
 ## Quick Start
 - Install the Arduino IDE.
 - Install the “FastLED” library (Library Manager).
-- Open `code/starter_nano/starter_nano.ino`, set `NUM_LEDS` to 7, choose your data pin, and upload.
+- Open `starter_nano/starter_nano.ino`, set `NUM_LEDS` to 7, choose your data pin, and upload.
 - Power the LED strip from a USB wall charger; power the microcontroller from your laptop.
 
 ## Wiring (summary)
