@@ -1,13 +1,13 @@
 #include <FastLED.h>
-#define NUM_LEDS 7
-#define LED_PIN 10
+#define NUM_LEDS 7 
+#define LED_PIN 10 
 
 CRGB leds[NUM_LEDS];
 
 void setup() {
-  // put your setup code here, to run once:
+  // Set NUM_LEDS to the total number of LEDs you have, and LED_PIN to which pin you are using
   FastLED.addLeds<WS2812B, LED_PIN, GRB>(leds, NUM_LEDS);
-  FastLED.setBrightness(50);
+  FastLED.setBrightness(50);                                           
   delay(2000);
 }
 
@@ -32,3 +32,4 @@ void loop () {
    FastLED.show();
   }
  }
+
