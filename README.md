@@ -24,6 +24,7 @@ Notes:
 ## Power Notes
 - One 7‑LED strip worst case ≈ 7 × 60 mA = 0.42 A at 5 V (full white, full brightness).
 - Cap brightness in code (e.g., 25–40%) for comfort and headroom.
+- Our USB charging block can only handle up to 1A so be mindful of how you power the pixels.
 
 ## Starter Code (Nano, 5V logic)
 See `starter_nano/starter_nano.ino`. Paste into the Arduino IDE.
