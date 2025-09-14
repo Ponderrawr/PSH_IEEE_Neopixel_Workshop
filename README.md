@@ -19,6 +19,7 @@ Build a 7‑LED NeoPixel project driven by an Arduino Nano and powered from a US
 
 Notes:
 - Do not power the strip from the Nano’s 5V pin.
+- You can power the strip with your computer's USB port, but verify it can handle at least 500mA.
 - If using a 3.3 V MCU (ESP32/ESP8266/RP2040), use a 74AHCT125/74HCT14 level shifter on the data line or lower LED V+ to ~4.3–4.5 V with a diode in series.
 
 ## Power Notes
