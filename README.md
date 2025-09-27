@@ -1,6 +1,6 @@
-# Penn State Harrisburg IEEE NeoPixel Workshop
+# Penn State Harrisburg IEEE Neopixel Workshop
 
-Build a 7‑LED NeoPixel project driven by an Arduino Nano and powered from a USB charger. This repo includes starter code, wiring/power notes, a step‑by‑step process, and troubleshooting.
+Build a 7‑LED Neopixel project driven by an Arduino Nano and powered from a USB charger. This repo includes starter code, wiring/power notes, a step‑by‑step process, and troubleshooting.
 
 ## Quick Start
 - Install the Arduino IDE.
