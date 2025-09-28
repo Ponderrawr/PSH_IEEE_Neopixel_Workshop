@@ -65,4 +65,7 @@ void loop() {
 ESP32/RP2040 Option
 If you use 3.3 V boards, while keeping power at 5V, add a level shifter (SN74AHCT125/74HCT14) or drop LED V+ to ~4.3–4.5 V with a diode. 
 
-![FastLED](FastLED_How-To.md)
+## Next Steps
+Once you have the basic code working try out some of the codes from `Pico_Neopixel_Codes`.
+
+To understand the FastLED library to build your own code, see: [FastLED Guide](FastLED_Guide.md)
