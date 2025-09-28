@@ -61,7 +61,8 @@ void loop() {
   delay(100);
 }
 
-
+```
 ESP32/RP2040 Option
 If you use 3.3 V boards, while keeping power at 5V, add a level shifter (SN74AHCT125/74HCT14) or drop LED V+ to ~4.3–4.5 V with a diode. 
 
+![FastLED](FastLED_How-To.md)
