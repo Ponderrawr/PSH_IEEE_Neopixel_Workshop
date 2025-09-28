@@ -69,3 +69,5 @@ If you use 3.3 V boards, while keeping power at 5V, add a level shifter (SN74AHC
 Once you have the basic code working try out some of the codes from `Pico_Neopixel_Codes`.
 
 To understand the FastLED library to build your own code, see: [FastLED Guide](FastLED_Guide.md)
+
+If you're looking for a challenge or don't know where to start, see: [FastLED Challenge](FastLED_Challenge.md)
