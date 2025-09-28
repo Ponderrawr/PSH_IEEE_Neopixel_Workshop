@@ -1,4 +1,4 @@
-# FastLED Creative Challenge Sheet
+# FastLED Challenge
 
 A series of coding challenges to explore the FastLED library. How many can you complete?
 
