@@ -7,8 +7,8 @@ Build a 7‑LED Neopixel project driven by an Arduino Nano and powered from a US
 - Install the Arduino Mbed OS RP2040 Boards by Arduino
 - Install the “FastLED” library by Daniel Garcia (Library Manager).
 - Set your board to Raspberry Pi Pico on your COM port.
-- Open `nanopixel_starter_code.ino`, set `NUM_LEDS` to 7, choose your data pin, and upload.
-- Power the LED strip from a wall charger; power the microcontroller from your laptop.
+- Open `Pico_Neopixel_Codes/neopixel_starter_code`, set `NUM_LEDS` to 7, choose your data pin, and upload.
+- Power the Neopixel strip from a wall charger; power the microcontroller from your laptop.
 
 ## Wiring (summary)
 ![Wiring diagram](Neopixels_Schematic_Pico.jpg)
@@ -30,7 +30,7 @@ Notes:
 - Neopixels are rated for 5V, so if you power them at their rated voltage ensure the microcontroller you use is at 5V logic or use a level shifter.
 
 ## Starter Code (Pico, 3.3V logic)
-See `starter_nano/starter_nano.ino`. Paste into the Arduino IDE.
+See `Pico_Neopixel_Codes/neopixel_starter_code`. Paste into the Arduino IDE.
 
 ```cpp
 #include <FastLED.h>
