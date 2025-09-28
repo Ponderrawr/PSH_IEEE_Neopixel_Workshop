@@ -11,7 +11,7 @@ Build a 7‑LED Neopixel project driven by an Arduino Nano and powered from a US
 - Power the LED strip from a wall charger; power the microcontroller from your laptop.
 
 ## Wiring (summary)
-![Wiring diagram](neopixel_wiring_diagram_v2.png)
+![Wiring diagram](neopixels_schematic_pico.jpg)
 
 - Wall charger 5V -> Breadboard Power Supply -> LED strip 3.3V  
 - Neopixel strip GND -> Breadboard Power Supply GND 
@@ -26,7 +26,8 @@ Notes:
 ## Power Notes
 - One 7‑LED strip worst case ≈ 7 × 60 mA = 0.42 A at 5 V (full white, full brightness).
 - Cap brightness in code (e.g., 25–40%) for comfort and headroom.
-- Our Wall charger can only handle up to 1A so be mindful of how you power the pixels.
+- Our wall charger can only handle up to 1A so be mindful of how you power the pixels.
+- Neopixels are rated for 5V, so if you power them at their rated voltage ensure the microcontroller you use is at 5V logic or use a level shifter.
 
 ## Starter Code (Pico, 3.3V logic)
 See `starter_nano/starter_nano.ino`. Paste into the Arduino IDE.
@@ -62,5 +63,5 @@ void loop() {
 
 
 ESP32/RP2040 Option
-If you use 3.3 V boards, add a level shifter (SN74AHCT125/74HCT14) or drop LED V+ to ~4.3–4.5 V with a diode. See code/starter_esp32/starter_esp32.ino. (Work in progress, not added yet)
+If you use 3.3 V boards, while keeping power at 5V, add a level shifter (SN74AHCT125/74HCT14) or drop LED V+ to ~4.3–4.5 V with a diode. 
 
